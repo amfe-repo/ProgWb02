@@ -5,13 +5,15 @@ let model1 = new localModelData("history_calc_db");
 let btn = document.getElementById("btn_history");
 let btn_equal = document.getElementById("btn_equal");
 let btn_collection_sign = document.querySelectorAll(".container .calculator .body-calc .buttons .sign");
-let label_calc = document.getElementById("label_calc");
-let label_calc_res = document.getElementById("label_calc_res");
 let btn_operation = document.querySelectorAll(".container .calculator .body-calc .buttons .btn_operations");
 let btn_ce = document.getElementById("btn_ce");
 let btn_c = document.getElementById("btn_c");
-let list_history = document.getElementById("list_history");
 let btn_del_history = document.getElementById("btn_del_history");
+
+let label_calc = document.getElementById("label_calc");
+let label_calc_res = document.getElementById("label_calc_res");
+
+let list_history = document.getElementById("list_history");
 
 let validator = true;
 let validateOperation = true;
@@ -69,7 +71,8 @@ btn.addEventListener("click", function(e)
 
 btn_equal.addEventListener("click", function(e) 
 {
-    let str = label_calc_res.textContent + label_calc.textContent;
+    let str_operation = label_calc_res.textContent + label_calc.textContent;
+    
     if(label_calc.textContent != "")
     {
         label_calc.textContent = eval(label_calc_res.textContent + label_calc.textContent);
@@ -79,7 +82,7 @@ btn_equal.addEventListener("click", function(e)
         label_calc.textContent = dropLastChar(label_calc_res.textContent);
     }
 
-    model1.addItem(createItemModel(str, label_calc.textContent));
+    model1.addItem(createItemModel(str_operation, label_calc.textContent));
     label_calc_res.textContent = "";
 
     refreshData();
