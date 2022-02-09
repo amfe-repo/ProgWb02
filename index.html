@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="./js/my_model.mjs" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+
+            <div class="history" id="history">
+                <label for=""></label>
+                <div class="history_body">
+                    <ul class="list_history" id="list_history">
+                    </ul>
+                </div>
+                <button id="btn_del_history">DEL</button>
+            </div>
+
+            <button class="btn_history" id="btn_history">H</button>
+
+            <div class="body-calc">
+                <label for="" id="label_calc_res"></label>
+                <label for="" id="label_calc"></label>
+                <div class="buttons">
+                    <button class="sign">7</button>
+                    <button class="sign">8</button>
+                    <button class="sign">9</button>
+                    <button class="btn_operations">-</button>
+
+                    <button class="sign">4</button>
+                    <button class="sign">5</button>
+                    <button class="sign">6</button>
+                    <button class="btn_operations">+</button>
+
+                    <button class="sign">1</button>
+                    <button class="sign">2</button>
+                    <button class="sign">3</button>
+                    <button class="btn_operations">*</button>
+
+                    <button class="sign">0</button>
+                    <button class="sign">.</button>
+                    <button class="btn_equal" id="btn_equal" >=</button>
+                    <button class="btn_operations">/</button>
+
+                    <button class="btn_C" id="btn_ce">CE</button>
+                    <button class="btn_C" id="btn_c">C</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
